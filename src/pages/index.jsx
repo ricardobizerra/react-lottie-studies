@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
 import Lottie from 'react-lottie-segments';
 import { WomanCoding } from "../assets";
+import { StyledLottie } from "./styles";
 
 export default function Home() {
-	//const [isStopped, setIsStopped] = useState(false);
 
     const animationData = WomanCoding;
 
@@ -15,8 +15,6 @@ export default function Home() {
             preserveAspectRatio: 'xMidYMid slice'
         }
     }
-
-    //const animationWomanCoding = useRef();
 
 	const [startPoint, setStartPoint] = useState(10);
 
@@ -31,16 +29,19 @@ export default function Home() {
 	}
 
     return (
-        <div>
-            <Lottie
-                options={defaultOptions}
-                width={500}
-                //lottieRef={animationWomanCoding}
-                playSegments={segment}
-            />
-            <button
-                onClick={playAnimation}
-            >clique aqui ahahhahahahhah</button>
-        </div>
+        <StyledLottie>
+			<div
+				onScroll={playAnimation}
+			>
+				<Lottie
+					options={defaultOptions}
+					width={500}
+					playSegments={segment}
+				/>
+				<button
+					onClick={playAnimation}
+				>clique aqui ahahhahahahhah</button>
+			</div>
+        </StyledLottie>
     )
 }

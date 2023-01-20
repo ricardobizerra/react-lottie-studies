@@ -9,7 +9,8 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-lottie": "^1.2.3",
-		"react-lottie-segments": "^1.4.9"
+		"react-lottie-segments": "^1.4.9",
+		"styled-components": "^5.3.6"
 	},
 	"scripts": {
 		"dev": "next dev",
